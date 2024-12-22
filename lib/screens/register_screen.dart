@@ -1,19 +1,37 @@
 import 'package:face_skin_detection_app/bloc/register/register_bloc.dart';
 import 'package:face_skin_detection_app/bloc/register/register_event.dart';
 import 'package:face_skin_detection_app/bloc/register/register_state.dart';
+import 'package:face_skin_detection_app/screens/home_screen.dart';
+import 'package:face_skin_detection_app/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:face_skin_detection_app/services/auth_service.dart';
-import 'package:face_skin_detection_app/screens/login_screen.dart';
 
-class RegisterScreen extends StatelessWidget {
-  RegisterScreen({super.key});
-// Define TextEditingController for each input field
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _RegisterScreenState createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  // Define TextEditingController for each input field
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _confirmPasswordController =
       TextEditingController();
+
+  @override
+  void dispose() {
+    // Dispose the controllers when the widget is disposed
+    _nameController.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+    _confirmPasswordController.dispose();
+    super.dispose(); // Call the dispose method of the superclass
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +50,7 @@ class RegisterScreen extends StatelessWidget {
                 );
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const LoginScreen()),
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
                 );
               } else if (state is RegisterFailureState) {
                 ScaffoldMessenger.of(context).showSnackBar(
@@ -158,7 +176,9 @@ class RegisterScreen extends StatelessWidget {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const LoginScreen(),
+                              builder: (context) => LoginScreen(
+                                  authService:
+                                      AuthService('http://127.0.0.1:5000/api')),
                             ),
                           );
                         },

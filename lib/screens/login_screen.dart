@@ -1,11 +1,12 @@
-import 'package:face_skin_detection_app/screens/forgot_password_screen.dart';
 import 'package:face_skin_detection_app/screens/home_screen.dart';
 import 'package:face_skin_detection_app/screens/register_screen.dart';
 import 'package:face_skin_detection_app/services/auth_service.dart';
 import 'package:flutter/material.dart';
+import 'package:face_skin_detection_app/utils/validators.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+  final AuthService authService; // Menambahkan parameter authService
+  const LoginScreen({super.key, required this.authService});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -14,6 +15,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  // ignore: unused_field
   final AuthService _authService =
       AuthService('http://127.0.0.1:5000/api'); // Masukkan base URL di sini
 
@@ -21,38 +23,42 @@ class _LoginScreenState extends State<LoginScreen> {
     final email = _emailController.text;
     final password = _passwordController.text;
 
-    // Validasi jika email atau password kosong
+    // Validasi input kosong
     if (email.isEmpty || password.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Email dan Password wajib diisi!')),
       );
-      return; // Menghentikan eksekusi fungsi login jika ada input kosong
+      return;
+    }
+
+    // Validasi format email
+    if (!Validators.isValidEmail(email)) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Masukkan email yang valid!')),
+      );
+      return;
     }
 
     try {
-      final result = await _authService.login(email, password);
+      final result = await widget.authService.login(email, password);
 
-      // Check if the widget is still mounted before using BuildContext
       if (mounted) {
         if (result['success']) {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text('Login Berhasil!')),
           );
-          // Navigate to the home screen if login is successful
-          Navigator.push(
+          Navigator.pushReplacement(
             context,
             MaterialPageRoute(builder: (context) => const HomeScreen()),
           );
         } else {
-          // Show the message from the response in case of failure
-          String message = result['message'] ?? 'Login Gagal';
+          final message = result['message'] ?? 'Login Gagal';
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text(message)),
           );
         }
       }
     } catch (e) {
-      // Check if the widget is still mounted before showing the error message
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Terjadi kesalahan: $e')),
@@ -105,11 +111,9 @@ class _LoginScreenState extends State<LoginScreen> {
             // Text Lupa Password
             GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const ForgotPasswordScreen(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
                 );
               },
               child: const Text(
@@ -150,7 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => RegisterScreen(),
+                        builder: (context) => const RegisterScreen(),
                       ),
                     );
                   },

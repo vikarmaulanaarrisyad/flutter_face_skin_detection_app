@@ -1,12 +1,16 @@
-import 'package:face_skin_detection_app/screens/register_screen.dart';
+import 'package:face_skin_detection_app/screens/login_screen.dart';
+import 'package:face_skin_detection_app/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+
+  // Buat instance AuthService
+  final AuthService _authService = AuthService('http://127.0.0.1:5000/api');
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +21,8 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         debugShowCheckedModeBanner: false,
-        home: RegisterScreen());
+        home: LoginScreen(
+          authService: _authService,
+        ));
   }
 }
