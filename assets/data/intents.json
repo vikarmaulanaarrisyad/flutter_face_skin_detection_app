@@ -1,0 +1,34 @@
+{
+  "intents": [
+    {
+      "tag": "sapaan",
+      "patterns": [
+        "Halo",
+        "Hai",
+        "Selamat pagi",
+        "Selamat siang",
+        "Selamat sore"
+      ],
+      "responses": [
+        "Halo! Selamat datang di Aplikasi BaikMu.",
+        "Hai! Bagaimana saya bisa membantu Anda?",
+        "Selamat pagi/siang/sore! Ada yang perlu ditanyakan?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "tanya_kabar",
+      "patterns": [
+        "Apa kabar?",
+        "Bagaimana hari ini?",
+        "Apa yang sedang terjadi?"
+      ],
+      "responses": [
+        "Saya baik, terima kasih!",
+        "Saya adalah bot, jadi tidak memiliki perasaan, tetapi saya siap membantu Anda.",
+        "Kabar baik! Bagaimana dengan Anda?"
+      ],
+      "context": [""]
+    }
+  ]
+}
