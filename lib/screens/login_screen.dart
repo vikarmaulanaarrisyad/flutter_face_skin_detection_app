@@ -1,3 +1,4 @@
+import 'package:face_skin_detection_app/screens/forgot_password_screen.dart';
 import 'package:face_skin_detection_app/screens/home_screen.dart';
 import 'package:face_skin_detection_app/screens/register_screen.dart';
 import 'package:face_skin_detection_app/services/auth_service.dart';
@@ -113,7 +114,8 @@ class _LoginScreenState extends State<LoginScreen> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => const ForgotPasswordScreen()),
                 );
               },
               child: const Text(

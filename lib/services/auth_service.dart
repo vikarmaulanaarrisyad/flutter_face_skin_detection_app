@@ -59,4 +59,31 @@ class AuthService {
       return {'success': false, 'message': 'An error occurred: $e'};
     }
   }
+
+  Future<Response> sendPasswordResetLink(String email) async {
+    try {
+      final response = await http.post(
+        Uri.parse('$baseUrl/forgot-password'),
+        body: {
+          'email': email,
+        },
+      );
+
+      if (response.statusCode == 200) {
+        return Response(true, 'Link reset kata sandi berhasil dikirim!');
+      } else {
+        return Response(false, 'Gagal mengirim link reset. Coba lagi.');
+      }
+    } catch (e) {
+      throw Exception('Terjadi kesalahan: $e');
+    }
+  }
+}
+
+class Response {
+  final bool isSuccessful;
+  final String message;
+  final String? errorMessage;
+
+  Response(this.isSuccessful, this.message, {this.errorMessage});
 }

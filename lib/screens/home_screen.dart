@@ -1,3 +1,4 @@
+import 'package:face_skin_detection_app/screens/chatbot_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -46,10 +47,21 @@ class HomeScreen extends StatelessWidget {
             ),
             Row(
               children: [
-                TextButton(onPressed: () {}, child: const Text('Home')),
+                TextButton(onPressed: () {
+                  
+                }, child: const Text('Home')),
                 TextButton(onPressed: () {}, child: const Text('Outfit')),
                 TextButton(onPressed: () {}, child: const Text('Camera')),
-                TextButton(onPressed: () {}, child: const Text('Chat')),
+                TextButton(
+                    onPressed: () {
+                      // Navigasi ke ChatbotPage saat tombol Chat ditekan
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ChatBotScreen()),
+                      );
+                    },
+                    child: const Text('Chat')),
                 TextButton(onPressed: () {}, child: const Text('Profile')),
               ],
             ),
