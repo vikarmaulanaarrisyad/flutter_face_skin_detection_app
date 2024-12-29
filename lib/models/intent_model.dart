@@ -20,4 +20,18 @@ class Intent {
       context: List<String>.from(json['context']),
     );
   }
+
+  // Mendapatkan respons acak
+  String getRandomResponse() {
+    if (responses.isNotEmpty) {
+      var randomResponse = List.from(responses)..shuffle();
+      return randomResponse.first;
+    }
+    return "Tidak ada respons yang tersedia.";
+  }
+
+  @override
+  String toString() {
+    return 'Intent(tag: $tag, patterns: $patterns, responses: $responses, context: $context)';
+  }
 }

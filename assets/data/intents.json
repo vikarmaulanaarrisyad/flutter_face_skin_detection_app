@@ -94,7 +94,13 @@
     },
     {
       "tag": "tidak_dikenali",
-      "patterns": ["", "", "", "", ""],
+      "patterns": [
+        "Saya tidak mengerti",
+        "Apa itu?",
+        "Bisa jelaskan?",
+        "Tolong ulangi",
+        "Saya tidak tahu"
+      ],
       "responses": [
         "Maaf, saya tidak mengerti.",
         "Saya tidak tahu.",
@@ -120,7 +126,7 @@
         "Sampai jumpa di kesempatan lain",
         "Selamat tinggal, semoga sukses selalu",
         "Sampai nanti, jangan lupa bahagia",
-        "Selamat berpisah",
+        "Selamat berpis ah",
         "Sampai jumpa di lain waktu, semoga baik-baik saja",
         "Selamat tinggal, semoga hari esok lebih baik",
         "Sampai ketemu lagi di lain kesempatan",
@@ -286,7 +292,7 @@
         "Kulit saya terang, mau rekomendasi outfit musim panas."
       ],
       "responses": [
-        "Di musim panas, Anda bisa memilih pakaian berbahan katun yang ringan dengan warna cerah seperti kuning atau turquoise. Kenakan juga topi untuk melindungi dari sinar matahari!",
+        "Di musim panas, Anda bisa memilih pakaian berb ahan katun yang ringan dengan warna cerah seperti kuning atau turquoise. Kenakan juga topi untuk melindungi dari sinar matahari!",
         "Untuk kulit sawo matang, warna cerah seperti hijau mint atau kuning pastel akan tampak segar di musim panas. Pilih bahan ringan seperti linen atau katun.",
         "Dengan kulit gelap, warna putih atau biru muda akan memberikan tampilan kontras yang menarik saat musim panas.",
         "Kulit terang cocok dengan pakaian berwarna pastel atau biru laut untuk tampilan musim panas yang sejuk dan stylish."

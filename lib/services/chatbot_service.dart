@@ -18,11 +18,9 @@ class ChatbotService {
         intents = (data['intents'] as List)
             .map((intent) => Intent.fromJson(intent))
             .toList();
-      } else {
-      }
-    // ignore: empty_catches
-    } catch (e) {
-    }
+      } else {}
+      // ignore: empty_catches
+    } catch (e) {}
   }
 
   // Fungsi untuk mencari respons berdasarkan input pengguna
@@ -37,8 +35,7 @@ class ChatbotService {
         // Membandingkan input dengan pola secara lebih ketat
         if (cleanedMessage == pattern.toLowerCase().trim()) {
           // Jika pola cocok, pilih respons acak dari intent yang sesuai
-          var randomResponse = List.from(intent.responses)..shuffle();
-          return randomResponse.first;
+          return intent.getRandomResponse();
         }
       }
     }
