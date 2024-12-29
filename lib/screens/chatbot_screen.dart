@@ -32,7 +32,8 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
     setState(() {
       _messages.add({'sender': 'user', 'text': text});
       final botResponse = _chatbotService.getResponse(text);
-      _messages.add({'sender': 'bot', 'text': botResponse});
+      _addBotMessage(botResponse,
+          typingAnimation: true); // Menambahkan animasi pada balasan bot
     });
 
     _controller.clear();
@@ -60,6 +61,9 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // Mendapatkan ukuran layar untuk responsivitas
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -80,13 +84,14 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
               decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
+                  topLeft: Radius.circular(25),
+                  topRight: Radius.circular(25),
                 ),
               ),
               child: ListView.builder(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+                padding: EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: screenWidth * 0.04), // Responsif padding
                 itemCount: _messages.length,
                 itemBuilder: (context, index) {
                   final message = _messages[index];
@@ -99,48 +104,47 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
               ),
             ),
           ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.blueAccent.withOpacity(0.1),
-              border: Border(
-                top: BorderSide(color: Colors.grey.shade300),
+          Padding(
+            padding: EdgeInsets.all(screenWidth * 0.02), // Responsif padding
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.blueAccent.withOpacity(0.1),
+                borderRadius: BorderRadius.circular(30),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.shade300,
+                    blurRadius: 10,
+                    spreadRadius: 2,
+                  ),
+                ],
               ),
-            ),
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Expanded(
-                  child: TextField(
-                    controller: _controller,
-                    decoration: InputDecoration(
-                      contentPadding: const EdgeInsets.symmetric(
-                          horizontal: 16, vertical: 8),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: screenWidth * 0.04), // Responsif padding
+                      child: TextField(
+                        controller: _controller,
+                        textInputAction: TextInputAction.send,
+                        onSubmitted: (text) => _sendMessage(text),
+                        decoration: InputDecoration(
+                          contentPadding:
+                              const EdgeInsets.symmetric(vertical: 16.0),
+                          hintText: 'Ketik pesan Anda...',
+                          hintStyle: TextStyle(color: Colors.grey.shade600),
+                          border: InputBorder.none,
+                          suffixIcon: IconButton(
+                            icon: const Icon(Icons.send),
+                            color: Colors.blueAccent,
+                            onPressed: () => _sendMessage(_controller.text),
+                          ),
+                        ),
                       ),
-                      filled: true,
-                      fillColor: Colors.white,
-                      hintText: 'Ketik pesan Anda...',
-                      hintStyle: TextStyle(color: Colors.grey.shade600),
                     ),
                   ),
-                ),
-                const SizedBox(width: 10),
-                GestureDetector(
-                  onTap: () => _sendMessage(_controller.text),
-                  child: Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.blueAccent,
-                    ),
-                    child: const Icon(
-                      Icons.send,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],
