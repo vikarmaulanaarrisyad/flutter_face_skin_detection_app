@@ -7,7 +7,22 @@
         "Hai",
         "Selamat pagi",
         "Selamat siang",
-        "Selamat sore"
+        "Selamat sore",
+        "Apa kabar?",
+        "Hai, ada yang bisa saya bantu?",
+        "Hai, apa kabar hari ini?",
+        "Selamat malam",
+        "Halo! Bagaimana keadaanmu?",
+        "Selamat pagi! Apa rencanamu hari ini?",
+        "Hai, apa kabar kamu sekarang?",
+        "Selamat siang! Ada yang bisa saya bantu untukmu?",
+        "Halo! Bagaimana harimu?",
+        "Hai, apa yang sedang kamu pikirkan?",
+        "Selamat sore! Bagaimana kabarmu?",
+        "Halo, ada yang bisa saya lakukan untukmu?",
+        "Hai, apa yang sedang kamu kerjakan?",
+        "Selamat pagi! Semoga harimu menyenangkan.",
+        "Hai, apa yang bisa saya bantu hari ini?"
       ],
       "responses": [
         "Halo! Selamat datang di Aplikasi BaikMu.",
@@ -21,12 +36,403 @@
       "patterns": [
         "Apa kabar?",
         "Bagaimana hari ini?",
-        "Apa yang sedang terjadi?"
+        "Apa yang sedang terjadi?",
+        "Apa berita?",
+        "Bagaimana kabarmu?",
+        "Apakabar?",
+        "Bagaimana keadaanmu?",
+        "Apa yang terbaru?",
+        "Bagaimana harimu?",
+        "Apa yang sedang kamu lakukan?",
+        "Bagaimana kehidupanmu?",
+        "Ada kabar apa?",
+        "Apa kabar hari ini?",
+        "Bagaimana kabar kesehatanmu?",
+        "Apa yang terjadi di sekitarmu?",
+        "Bagaimana keadaan cuaca?",
+        "Apa kabarnya dunia ini?",
+        "Bagaimana keadaanmu hari ini?",
+        "Ada yang menarik terjadi?",
+        "Apa yang sedang kamu pikirkan?"
       ],
       "responses": [
         "Saya baik, terima kasih!",
         "Saya adalah bot, jadi tidak memiliki perasaan, tetapi saya siap membantu Anda.",
         "Kabar baik! Bagaimana dengan Anda?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "ucapan_selamat",
+      "patterns": [
+        "Selamat ulang tahun!",
+        "Selamat hari jadi!",
+        "Selamat datang!",
+        "Selamat datang di Aplikasi BaikMu",
+        "Selamat pagi!",
+        "Selamat malam!",
+        "Selamat sore!",
+        "Selamat siang!",
+        "Selamat bekerja!",
+        "Selamat liburan!",
+        "Selamat tahun baru!",
+        "Selamat natal!",
+        "Selamat hari kemerdekaan!",
+        "Selamat pernikahan!",
+        "Selamat atas prestasimu!",
+        "Selamat belajar!",
+        "Selamat bersenang-senang!",
+        "Selamat menikmati hidup!",
+        "Selamat sukses!",
+        "Selamat beraktivitas!"
+      ],
+      "responses": [
+        "Terima kasih! Selamat datang!",
+        "Terima kasih! Selamat datang di Aplikasi BaikMu! Ada yang bisa saya bantu?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "tidak_dikenali",
+      "patterns": ["", "", "", "", ""],
+      "responses": [
+        "Maaf, saya tidak mengerti.",
+        "Saya tidak tahu.",
+        "Kata di luar kemampuan saya.",
+        "Mungkin Anda bisa menanyakan mengenai aplikasi ini."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "selamat_tinggal",
+      "patterns": [
+        "Sampai jumpa",
+        "Selamat tinggal",
+        "Selamat tinggal, semoga harimu menyenangkan",
+        "Sampai nanti",
+        "Sampai bertemu lagi",
+        "Selamat jalan",
+        "Semoga kita bisa bertemu lagi",
+        "Sampai jumpa besok",
+        "Selamat tinggal, tetap semangat!",
+        "Sampai ketemu di lain waktu",
+        "Selamat jalan, hati-hati di perjalanan",
+        "Sampai jumpa di kesempatan lain",
+        "Selamat tinggal, semoga sukses selalu",
+        "Sampai nanti, jangan lupa bahagia",
+        "Selamat berpisah",
+        "Sampai jumpa di lain waktu, semoga baik-baik saja",
+        "Selamat tinggal, semoga hari esok lebih baik",
+        "Sampai ketemu lagi di lain kesempatan",
+        "Selamat jalan, tetap semangat!",
+        "Sampai jumpa, semoga berhasil dalam segala hal"
+      ],
+      "responses": [
+        "Sampai jumpa!",
+        "Semoga harimu menyenangkan",
+        "Selamat tinggal! Jangan ragu untuk kembali lagi."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "terima_kasih",
+      "patterns": [
+        "Terima kasih",
+        "Terima kasih banyak",
+        "Makasih",
+        "Makasih banyak",
+        "Terima kasih atas bantuannya",
+        "Saya sangat berterima kasih",
+        "Terima kasih sebelumnya",
+        "Terima kasih ya",
+        "Makasih ya",
+        "Terima kasih banyak atas informasinya",
+        "Terima kasih atas perhatiannya",
+        "Matur nuwun",
+        "Suwun",
+        "Trimakasih",
+        "Terima kasih atas kerja samanya",
+        "Terima kasih banyak, Anda luar biasa!",
+        "Makasih atas dukungannya",
+        "Terima kasih, Anda sangat membantu",
+        "Makasih banyak, semoga berkah",
+        "Terima kasih, semoga hari Anda menyenangkan"
+      ],
+      "responses": [
+        "Terima kasih! Senang bisa membantu Anda.",
+        "Tidak masalah, dengan senang hati.",
+        "Sama-sama! Jika Anda memiliki pertanyaan lain, jangan ragu untuk bertanya."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "kulit_gelap",
+      "patterns": [
+        "Saya memiliki warna kulit yang gelap. Outfit apa yang cocok untuk saya?",
+        "Outfit apa yang bagus untuk warna kulit saya yang gelap?",
+        "Pakaian seperti apa yang cocok untuk kulit gelap?",
+        "Warna apa yang pas untuk kulit saya yang gelap?",
+        "Kulit saya gelap, pakaian apa yang sesuai?"
+      ],
+      "responses": [
+        "Untuk warna kulit gelap, saya rekomendasikan warna-warna cerah seperti kuning atau merah. Kain yang ringan juga akan sangat cocok!",
+        "Warna-warna cerah dan berani seperti oranye, merah, dan kuning sangat cocok untuk kulit gelap dan akan membuat Anda tampak menonjol!",
+        "Pakaian dengan warna putih, pastel, atau biru terang dapat memberikan kontras yang menawan untuk kulit gelap Anda."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "sawo_matang",
+      "patterns": [
+        "Saya punya warna kulit sawo matang. Apa yang sebaiknya saya kenakan?",
+        "Punya ide pakaian yang sesuai untuk kulit sawo matang?",
+        "Warna kulit sawo matang, cocoknya pakai baju warna apa ya?",
+        "Kulit saya sawo matang, baju apa yang cocok ya?",
+        "Saya memiliki kulit sawo matang. Apa warna yang pas?"
+      ],
+      "responses": [
+        "Warna kulit sawo matang cocok dengan hampir semua warna! Saya sarankan untuk mencoba warna hijau zamrud atau ungu tua.",
+        "Untuk kulit sawo matang, warna seperti coklat, biru tua, atau merah marun bisa sangat menonjolkan warna kulit Anda.",
+        "Pakaian dengan warna hijau zaitun, biru tua, atau krem bisa memberikan kesan elegan bagi Anda yang memiliki kulit sawo matang."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "kulit_terang",
+      "patterns": [
+        "Warna kulit saya terang, bisa kasih saran pakaian?",
+        "Saya butuh saran outfit untuk warna kulit terang.",
+        "Saya ingin tahu outfit yang bagus untuk kulit terang.",
+        "Apa warna yang sesuai untuk kulit saya yang terang?",
+        "Kulit saya terang, warna apa yang cocok untuk pakaian?"
+      ],
+      "responses": [
+        "Dengan warna kulit terang, warna pastel atau netral seperti putih dan beige akan sangat cocok. Bagaimana dengan gaun berwarna mint?",
+        "Pakaian dengan warna pastel, biru muda, atau abu-abu akan melengkapi kulit terang Anda dengan baik!",
+        "Warna cerah atau netral seperti biru pastel, putih, atau beige sangat cocok untuk kulit terang dan memberikan kesan segar."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "Pesta",
+      "patterns": [
+        "Saya mau pergi ke pesta, warna kulit saya gelap. Apa yang sebaiknya saya pakai?",
+        "Outfit untuk pesta dengan warna kulit sawo matang?",
+        "Saya memiliki warna kulit terang dan mau ke pesta. Outfit apa yang cocok?",
+        "Acara pesta malam, kulit saya sawo matang, pakaian apa yang tepat?",
+        "Warna kulit saya gelap dan ada pesta, baju apa yang bagus?",
+        "Punya ide outfit untuk pesta, warna kulit saya terang?",
+        "Outfit untuk pesta dengan warna kulit gelap?",
+        "Saya mau pergi ke pesta malam, kulit saya sawo matang, baju apa yang cocok?"
+      ],
+      "responses": [
+        "Untuk pesta, Anda bisa mencoba gaun panjang berwarna merah atau outfit yang memadukan warna cerah dengan aksesori yang glamor!",
+        "Pakaian pesta dengan warna berani seperti merah atau kuning sangat cocok untuk kulit gelap. Tambahkan aksesori untuk tampilan glamor!",
+        "Kulit terang? Pilih gaun pastel atau kombinasi putih dan emas untuk tampilan yang elegan di pesta.",
+        "Untuk kulit sawo matang, warna hijau zamrud atau ungu tua dapat menonjolkan keunikan warna kulit Anda di pesta malam."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "Formal",
+      "patterns": [
+        "Untuk acara formal, saya punya kulit terang. Saran pakaian?",
+        "Outfit apa yang cocok untuk acara formal dengan warna kulit gelap?",
+        "Saya punya warna kulit sawo matang, outfit untuk acara formal?",
+        "Acara formal, warna kulit saya terang, pakaian apa yang disarankan?",
+        "Saya mau pergi ke acara formal, warna kulit saya gelap. Ada ide outfit?",
+        "Kulit sawo matang, outfit formal apa yang cocok?",
+        "Pakaian apa yang disarankan untuk acara formal jika warna kulit saya terang?",
+        "Saya butuh outfit untuk acara formal, warna kulit saya sawo matang."
+      ],
+      "responses": [
+        "Untuk acara formal, pertimbangkan setelan jas berwarna navy atau abu-abu dengan kemeja putih. Warna-warna tersebut akan membuat Anda terlihat elegan.",
+        "Dengan kulit gelap, setelan warna charcoal atau biru gelap akan memberikan kesan formal dan berkelas.",
+        "Kulit sawo matang cocok dengan warna seperti beige atau cokelat tua untuk tampilan formal yang elegan.",
+        "Untuk kulit terang, pakaian formal dengan warna pastel atau abu-abu terang akan menonjolkan kesan elegan."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "Kasual",
+      "patterns": [
+        "Saya mau outfit kasual, warna kulit saya gelap. Saran?",
+        "Outfit kasual untuk warna kulit sawo matang?",
+        "Pakaian kasual untuk warna kulit terang, ada saran?",
+        "Saya ingin gaya kasual, kulit saya sawo matang, baju apa yang cocok?",
+        "Kulit saya gelap, mau pakai outfit kasual. Ada ide?",
+        "Saya butuh saran outfit kasual untuk kulit terang.",
+        "Untuk warna kulit sawo matang, outfit kasual apa yang cocok?",
+        "Pakaian kasual yang cocok untuk kulit gelap, ada rekomendasi?"
+      ],
+      "responses": [
+        "Untuk tampilan kasual, warna-warna cerah seperti kuning atau oranye sangat cocok bagi kulit gelap. Padukan dengan celana jeans untuk tampilan yang segar.",
+        "Kulit sawo matang cocok dengan warna netral seperti krem atau olive green untuk tampilan kasual yang santai.",
+        "Untuk kulit terang, pilih warna pastel atau abu-abu untuk tampilan kasual yang segar dan simpel.",
+        "Jika kulit Anda sawo matang, coba kaos warna navy atau hijau dengan jeans atau celana chino untuk gaya kasual."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "Musim_Panas",
+      "patterns": [
+        "Musim panas sudah dekat, warna kulit saya sawo matang. Apa rekomendasi outfitnya?",
+        "Outfit apa yang cocok untuk musim panas jika kulit saya gelap?",
+        "Saya punya warna kulit terang, musim panas ini saya harus pakai apa?",
+        "Saya butuh outfit musim panas, warna kulit saya sawo matang.",
+        "Musim panas segera tiba, saran outfit untuk warna kulit gelap?",
+        "Outfit musim panas yang cocok untuk warna kulit terang?",
+        "Saya mau pakaian untuk musim panas, warna kulit saya sawo matang.",
+        "Kulit saya terang, mau rekomendasi outfit musim panas."
+      ],
+      "responses": [
+        "Di musim panas, Anda bisa memilih pakaian berbahan katun yang ringan dengan warna cerah seperti kuning atau turquoise. Kenakan juga topi untuk melindungi dari sinar matahari!",
+        "Untuk kulit sawo matang, warna cerah seperti hijau mint atau kuning pastel akan tampak segar di musim panas. Pilih bahan ringan seperti linen atau katun.",
+        "Dengan kulit gelap, warna putih atau biru muda akan memberikan tampilan kontras yang menarik saat musim panas.",
+        "Kulit terang cocok dengan pakaian berwarna pastel atau biru laut untuk tampilan musim panas yang sejuk dan stylish."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "Musim_Dingin",
+      "patterns": [
+        "Untuk musim dingin, kulit saya cerah. Apa yang sebaiknya saya kenakan?",
+        "Saya punya kulit gelap, musim dingin ini cocoknya pakai apa?",
+        "Warna kulit sawo matang, pakaian yang cocok untuk musim dingin apa?",
+        "Saya mau rekomendasi outfit musim dingin, warna kulit saya terang.",
+        "Outfit apa yang sesuai untuk musim dingin dengan kulit gelap?",
+        "Kulit saya sawo matang, musim dingin ini pakai apa ya?",
+        "Musim dingin segera tiba, saran pakaian untuk warna kulit terang?",
+        "Warna kulit gelap, cocok pakai apa di musim dingin?"
+      ],
+      "responses": [
+        "Di musim dingin, pilih lapisan pakaian seperti sweater berwarna gelap dengan scarf berwarna cerah. Cocokkan dengan coat berwarna navy untuk tampilan yang stylish.",
+        "Untuk kulit gelap, pilih jaket atau coat berwarna cokelat tua atau hijau zaitun, dipadukan dengan syal berwarna cerah.",
+        "Kulit terang akan cocok dengan warna-warna lembut seperti abu-abu atau krem saat musim dingin. Padukan dengan aksesori berwarna hangat seperti merah atau oranye.",
+        "Kulit sawo matang cocok dengan sweater berwarna earth tone seperti coklat, olive, atau burgundy untuk tampilan yang elegan di musim dingin."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "Musim_Semi",
+      "patterns": [
+        "Musim semi akan datang, outfit apa yang cocok untuk kulit sawo matang?",
+        "Pakaian untuk musim semi, warna kulit saya gelap.",
+        "Saya punya kulit terang, outfit apa yang cocok untuk musim semi?",
+        "Musim semi segera tiba, saran outfit untuk warna kulit sawo matang?",
+        "Outfit musim semi yang cocok untuk warna kulit gelap?",
+        "Saya mau pakaian musim semi, warna kulit saya terang.",
+        "Kulit saya sawo matang, mau rekomendasi outfit untuk musim semi.",
+        "Musim semi sudah dekat, warna kulit saya terang, pakai apa ya?"
+      ],
+      "responses": [
+        "Di musim semi, warna-warna pastel atau lembut seperti pink muda atau hijau mint akan cocok untuk kulit sawo matang. Padukan dengan jeans atau rok kasual.",
+        "Untuk kulit gelap, warna-warna bunga seperti lavender atau peach akan membuat tampilan Anda segar di musim semi.",
+        "Kulit terang cocok dengan warna pastel atau netral seperti krem, biru langit, atau kuning pastel untuk tampilan yang lembut di musim semi.",
+        "Untuk kulit sawo matang, pilih blus warna peach atau hijau muda yang cocok dengan tema musim semi yang cerah."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "Musim_Gugur",
+      "patterns": [
+        "Saya mau pakaian musim gugur, warna kulit saya sawo matang.",
+        "Outfit apa yang cocok untuk musim gugur jika warna kulit saya gelap?",
+        "Punya saran outfit musim gugur untuk kulit terang?",
+        "Kulit saya gelap, musim gugur ini sebaiknya pakai apa?",
+        "Warna kulit sawo matang, musim gugur cocoknya pakai apa?",
+        "Saya punya kulit terang, mau rekomendasi pakaian untuk musim gugur.",
+        "Outfit musim gugur yang cocok untuk warna kulit sawo matang?",
+        "Musim gugur sudah dekat, pakaian apa yang cocok untuk warna kulit gelap?"
+      ],
+      "responses": [
+        "Di musim gugur, warna-warna hangat seperti coklat, oranye, atau burgundy sangat cocok untuk kulit sawo matang. Padukan dengan jaket denim untuk gaya kasual.",
+        "Untuk kulit gelap, pilih warna-warna bumi seperti coklat, mustard, atau hijau zaitun agar sesuai dengan tema musim gugur.",
+        "Kulit terang akan tampak menawan dengan pakaian berwarna burgundy, cokelat muda, atau kuning mustard di musim gugur.",
+        "Kulit sawo matang bisa mencoba sweater berwarna merah bata atau hijau tua untuk tampilan yang elegan dan hangat di musim gugur."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "rekomendasi_pakaian",
+      "patterns": [
+        "Ada tips untuk memilih warna pakaian berdasarkan warna kulit?",
+        "Bagaimana cara memilih pakaian yang sesuai dengan warna kulit saya?",
+        "Tips memilih warna pakaian agar sesuai dengan kulit?",
+        "Pakaian warna apa yang sebaiknya saya pakai sesuai dengan warna kulit?",
+        "Bagaimana cara menemukan warna pakaian yang cocok dengan kulit saya?",
+        "Warna pakaian apa yang sebaiknya dihindari untuk warna kulit tertentu?",
+        "Punya tips memilih warna pakaian untuk berbagai jenis kulit?",
+        "Apa saran dalam memilih warna baju untuk kulit sawo matang?",
+        "Bagaimana cara memilih warna outfit agar terlihat bagus dengan warna kulit?",
+        "Apa tips umum dalam memilih warna pakaian agar terlihat menawan?"
+      ],
+      "responses": [
+        "Secara umum, pilih warna yang kontras dengan warna kulit Anda. Warna cerah untuk kulit gelap dan warna netral untuk kulit terang biasanya sangat cocok.",
+        "Cobalah untuk mengenakan warna yang membuat Anda merasa percaya diri. Lihat di cermin dan perhatikan mana yang membuat wajah Anda bersinar!",
+        "Untuk kulit gelap, warna-warna cerah seperti merah, kuning, dan putih bisa membuat tampilan Anda lebih standout. Sementara itu, kulit terang cocok dengan warna pastel atau netral untuk tampilan yang lembut.",
+        "Kulit sawo matang sangat fleksibel dan bisa cocok dengan hampir semua warna, terutama warna-warna alami seperti hijau tua, merah marun, atau biru tua.",
+        "Jika Anda memiliki kulit terang, hindari warna yang terlalu mencolok seperti neon. Sebaliknya, pilih warna pastel atau warna netral seperti abu-abu atau beige.",
+        "Selalu pilih warna pakaian yang membuat Anda merasa nyaman dan percaya diri. Perhatikan pencahayaan di cermin saat mencoba warna baru!",
+        "Perhatikan kontras antara warna kulit dan pakaian. Warna yang berlawanan dengan tone kulit seringkali memberikan kesan yang menarik.",
+        "Pilih bahan pakaian yang juga mendukung warna pilihan Anda, karena bahan yang tepat bisa menambah tampilan yang lebih sesuai dengan warna kulit Anda.",
+        "Jika kulit Anda cenderung gelap, cobalah warna-warna cerah atau pastel untuk memberikan kesan kontras yang menawan. Kulit sawo matang bisa memilih warna apa saja, sementara kulit terang akan tampak segar dengan warna lembut dan pastel."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "jenis_bahan",
+      "patterns": [
+        "Bahan pakaian apa yang cocok untuk kulit saya yang gelap?",
+        "Apa rekomendasi bahan untuk kulit terang di cuaca panas?",
+        "Saya punya kulit sawo matang, bahan pakaian apa yang disarankan?",
+        "Untuk kulit terang, bahan pakaian apa yang cocok saat cuaca dingin?",
+        "Bahan apa yang sesuai untuk warna kulit gelap di musim panas?",
+        "Saya punya kulit gelap, bahan pakaian apa yang nyaman dipakai?",
+        "Rekomendasi bahan pakaian yang cocok untuk kulit terang di cuaca lembab?",
+        "Kulit saya sawo matang, bahan pakaian apa yang nyaman untuk dipakai sehari-hari?",
+        "Cuaca panas dan kulit saya gelap, bahan apa yang terbaik?",
+        "Apa bahan pakaian yang cocok untuk kulit terang saat cuaca panas?"
+      ],
+      "responses": [
+        "Untuk kulit gelap, pilih bahan yang breathable seperti katun atau linen agar tetap nyaman. Warna-warna cerah dalam bahan ini juga akan membuat penampilan lebih segar.",
+        "Untuk kulit terang di cuaca panas, bahan ringan seperti rayon atau chiffon sangat direkomendasikan. Pilih warna pastel untuk kesan yang lebih lembut.",
+        "Kulit sawo matang cocok dengan bahan seperti katun, linen, atau chambray yang nyaman dan memberikan tampilan kasual yang elegan.",
+        "Untuk kulit gelap, bahan ringan seperti katun atau linen tidak hanya membuat nyaman tetapi juga cocok dipadukan dengan warna-warna cerah di musim panas.",
+        "Di cuaca dingin, kulit terang akan terlihat menarik dengan bahan seperti wol atau kasmir berwarna netral atau pastel.",
+        "Untuk kulit sawo matang, bahan seperti rayon atau sutra memberikan tampilan yang halus dan menawan, terutama di cuaca lembab.",
+        "Kulit gelap akan sangat cocok dengan bahan denim atau katun twill untuk tampilan kasual yang santai namun stylish.",
+        "Bagi Anda yang berkulit terang, bahan seperti sutra atau satin berwarna lembut cocok untuk cuaca hangat dan memberikan kesan elegan.",
+        "Di musim panas, kulit sawo matang dapat memilih bahan ringan seperti linen atau katun dengan warna-warna alami seperti hijau daun atau krem.",
+        "Jika cuaca panas dan Anda berkulit gelap, cobalah bahan linen dengan warna pastel atau terang agar tetap sejuk dan tampak fresh."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "mix_and_match",
+      "patterns": [
+        "Bagaimana cara memadukan warna pakaian untuk kulit sawo matang?",
+        "Tips mix and match untuk kulit gelap?",
+        "Warna apa saja yang cocok dipadukan untuk kulit terang?",
+        "Saya berkulit sawo matang, warna apa yang bagus dipadukan?",
+        "Mix and match pakaian apa yang cocok untuk kulit gelap?",
+        "Apa kombinasi warna terbaik untuk warna kulit terang?",
+        "Cara memadukan warna baju untuk kulit sawo matang?",
+        "Tips padu padan warna untuk kulit gelap?",
+        "Saya punya kulit terang, bagaimana cara memadukan warna baju?",
+        "Untuk kulit gelap, warna apa yang cocok jika dipadukan bersama?"
+      ],
+      "responses": [
+        "Untuk kulit sawo matang, padukan warna hangat seperti coklat atau hijau daun dengan warna cerah seperti kuning atau merah. Pastikan ada keseimbangan antara warna netral dan cerah.",
+        "Untuk kulit gelap, coba mix and match antara warna-warna bold seperti merah marun atau biru tua dengan item berwarna cerah untuk menciptakan kontras yang menarik.",
+        "Kulit terang bisa tampil memukau dengan paduan warna pastel seperti pink muda atau biru langit, dipadukan dengan warna netral seperti putih atau abu-abu.",
+        "Kulit sawo matang cocok dengan paduan warna-warna bumi seperti olive, krem, atau burgundy dengan warna terang seperti oranye atau kuning.",
+        "Untuk kulit gelap, coba padukan warna-warna hangat seperti oranye atau mustard dengan aksen putih atau abu-abu agar tampilan terlihat segar.",
+        "Jika Anda berkulit terang, paduan warna netral seperti beige dan navy cocok untuk tampilan kasual yang elegan.",
+        "Untuk kulit sawo matang, warna biru navy atau hijau zamrud dengan aksen cerah seperti peach atau merah muda akan memberikan keseimbangan yang menawan.",
+        "Jika Anda berkulit gelap, perpaduan antara hitam dengan warna-warna cerah seperti kuning atau turquoise bisa memberikan tampilan yang kontras dan stylish.",
+        "Kulit terang bisa mencoba warna-warna lembut seperti lavender atau mint dipadukan dengan warna netral seperti abu-abu muda untuk tampilan yang segar.",
+        "Untuk kulit sawo matang, padu padan antara warna tanah seperti coklat tua atau terracotta dengan warna cerah akan menghasilkan tampilan yang alami namun standout."
       ],
       "context": [""]
     }
